@@ -1,0 +1,55 @@
+.header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+    gap: 100px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-bottom: 3px solid white;
+    backdrop-filter: blur(3px);
+    overflow: hidden;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header-icon {
+    text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    transition: all 200ms ease;
+}
+
+.header-title {
+    font-weight: bold;
+    font-size: 48px;
+    display: inline;
+    text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    transition: all 200ms ease;
+}
+
+.title-container:hover .header-title,
+.title-container:hover .header-icon {
+    text-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
+}
+
+.author-link {
+    font-weight: bold;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    vertical-align: middle;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 2px dashed white;
+    transition: all 200ms ease;
+}
+
+.author-link:hover {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+}

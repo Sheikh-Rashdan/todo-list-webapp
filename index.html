@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>To-Do</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/headers.css">
+    <link rel="stylesheet" href="styles/todo.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/fonts/transformations.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="title-container">
+            <i class='bx  bxs-check-square bx-lg header-icon'></i>
+            <p class="header-title">To-Do List</p>
+        </div>
+        <a class="author-link" href="https://github.com/Sheikh-Rashdan" target="_blank">
+            <i class='bx  bxs-user-circle'></i>
+            Sheikh-Rashdan
+        </a>
+    </header>
+
+    <section class="todo-container">
+        <div class="todo-input-container">
+            <input type="text" placeholder="Enter Task" class="todo-task-input">
+            <select class="todo-color-input">
+                <option value="white" selected class="todo-color-option todo-color-white"></option>
+                <option value="blue" class="todo-color-option todo-color-blue"></option>
+                <option value="green" class="todo-color-option todo-color-green"></option>
+                <option value="orange" class="todo-color-option todo-color-orange"></option>
+                <option value="red" class="todo-color-option todo-color-red"></option>
+            </select>
+        </div>
+        <button class="todo-add-button">
+            <i class='bx  bxs-plus-circle bx-sm'></i>
+            ADD
+        </button>
+        <div class="todo-display-container">
+        </div>
+    </section>
+</body>
+
+</html>

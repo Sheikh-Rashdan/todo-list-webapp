@@ -1,0 +1,39 @@
+:root {
+    --primary-color: rgb(104, 104, 218);
+    --primary-accent: rgb(99, 99, 182);
+    --secondary-color: rgb(49, 49, 177);
+    --secondary-accent: rgb(65, 65, 204);
+
+    --option-white: rgb(200, 200, 200);
+    --option-blue: rgb(74, 132, 218);
+    --option-green: rgb(149, 233, 110);
+    --option-orange: rgb(240, 168, 61);
+    --option-red: rgb(240, 77, 77);
+}
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto, Arial;
+    background-image: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+    color: white;
+    box-sizing: border-box;
+}
+
+body::selection {
+    background-color: rgba(0, 0, 0, 0.2)
+}
+
+p {
+    margin: 0px;
+    cursor: default;
+}
+
+a {
+    color: white;
+}
