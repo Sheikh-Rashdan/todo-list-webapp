@@ -4,11 +4,14 @@
     --secondary-color: rgb(49, 49, 177);
     --secondary-accent: rgb(65, 65, 204);
 
-    --option-white: rgb(200, 200, 200);
-    --option-blue: rgb(74, 132, 218);
-    --option-green: rgb(149, 233, 110);
-    --option-orange: rgb(240, 168, 61);
-    --option-red: rgb(240, 77, 77);
+    --option-white: rgb(159, 159, 159);
+    --option-blue: rgb(45, 115, 219);
+    --option-green: rgb(76, 170, 33);
+    --option-orange: rgb(234, 120, 44);
+    --option-red: rgb(205, 58, 58);
+
+    --delete-color: rgb(190, 2, 2);
+    --delete-accent: rgb(235, 21, 21);
 }
 
 html,
