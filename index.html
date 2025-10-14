@@ -3,87 +3,87 @@
 <html>
 
 <head>
-    <title>To-Do</title>
+  <title>To-Do</title>
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/headers.css">
-    <link rel="stylesheet" href="styles/todo.css">
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/headers.css">
+  <link rel="stylesheet" href="styles/todo.css">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 
-    <!-- Icons -->
-    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
-    <link href='https://cdn.boxicons.com/fonts/transformations.min.css' rel='stylesheet'>
+  <!-- Icons -->
+  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <link href='https://cdn.boxicons.com/fonts/transformations.min.css' rel='stylesheet'>
 
 </head>
 
 <body>
-    <header class="header">
-        <div class="title-container">
-            <i class='bx  bxs-check-square bx-lg header-icon'></i>
-            <p class="header-title">To-Do List</p>
-        </div>
-        <a class="author-link" href="https://github.com/Sheikh-Rashdan" target="_blank">
-            <i class='bx  bxs-user-circle'></i>
-            Sheikh-Rashdan
-        </a>
-    </header>
+  <header class="header">
+    <div class="title-container">
+      <i class='bx  bxs-check-square bx-lg header-icon'></i>
+      <p class="header-title">To-Do List</p>
+    </div>
+    <a class="author-link" href="https://github.com/Sheikh-Rashdan" target="_blank">
+      <i class='bx  bxs-user-circle'></i>
+      Sheikh-Rashdan
+    </a>
+  </header>
 
-    <section class="todo-container">
-        <div class="todo-input-container">
-            <input type="text" placeholder="Enter Task" class="todo-task-input">
-            <select class="todo-color-input todo-color-option-orange">
-                <option value="white" selected class="todo-color-option todo-color-option-white"></option>
-                <option value="blue" class="todo-color-option todo-color-option-blue"></option>
-                <option value="green" class="todo-color-option todo-color-option-green"></option>
-                <option value="orange" class="todo-color-option todo-color-option-orange"></option>
-                <option value="red" class="todo-color-option todo-color-option-red"></option>
-            </select>
-        </div>
-        <button class="todo-add-button">
-            <i class='bx  bxs-plus-circle bx-sm'></i>
-            ADD
+  <section class="todo-container">
+    <div class="todo-input-container">
+      <input type="text" placeholder="Enter Task" class="todo-task-input" id="todo-task-input">
+      <select class="todo-color-input todo-color-option-white" id="todo-color-input">
+        <option value="white" selected class="todo-color-option todo-color-option-white"></option>
+        <option value="blue" class="todo-color-option todo-color-option-blue"></option>
+        <option value="green" class="todo-color-option todo-color-option-green"></option>
+        <option value="orange" class="todo-color-option todo-color-option-orange"></option>
+        <option value="red" class="todo-color-option todo-color-option-red"></option>
+      </select>
+    </div>
+    <button class="todo-add-button js-todo-add-button">
+      <i class='bx  bxs-plus-circle bx-sm'></i>
+      ADD
+    </button>
+    <div class="todo-display-container js-todo-display-container">
+      <div class="todo-display-card todo-display-green">
+        Wash the Dishes
+        <button class="todo-display-delete">
+          <i class='bx  bxs-trash-x bx-sm'></i>
         </button>
-        <div class="todo-display-container">
-            <div class="todo-display-card todo-display-green">
-                Wash the Dishes
-                <button class="todo-display-delete">
-                    <i class='bx  bxs-trash-x bx-sm'></i>
-                </button>
-            </div>
-            <div class="todo-display-card todo-display-red">
-                Dance to a Song
-                <button class="todo-display-delete">
-                    <i class='bx  bxs-trash-x bx-sm'></i>
-                </button>
-            </div>
-            <div class="todo-display-card todo-display-blue">
-                Kill a mockingbird
-                <button class="todo-display-delete">
-                    <i class='bx  bxs-trash-x bx-sm'></i>
-                </button>
-            </div>
-            <div class="todo-display-card todo-display-orange">
-                WEE
-                <button class="todo-display-delete">
-                    <i class='bx  bxs-trash-x bx-sm'></i>
-                </button>
-            </div>
-            <div class="todo-display-card todo-display-white">
-                WEE
-                <button class="todo-display-delete">
-                    <i class='bx  bxs-trash-x bx-sm'></i>
-                </button>
-            </div>
-        </div>
-    </section>
+      </div>
+      <div class="todo-display-card todo-display-red">
+        Dance to a Song
+        <button class="todo-display-delete">
+          <i class='bx  bxs-trash-x bx-sm'></i>
+        </button>
+      </div>
+      <div class="todo-display-card todo-display-blue">
+        Kill a mockingbird
+        <button class="todo-display-delete">
+          <i class='bx  bxs-trash-x bx-sm'></i>
+        </button>
+      </div>
+      <div class="todo-display-card todo-display-orange">
+        WEE
+        <button class="todo-display-delete">
+          <i class='bx  bxs-trash-x bx-sm'></i>
+        </button>
+      </div>
+      <div class="todo-display-card todo-display-white">
+        WEE
+        <button class="todo-display-delete">
+          <i class='bx  bxs-trash-x bx-sm'></i>
+        </button>
+      </div>
+    </div>
+  </section>
 
-    <script src="scripts/todo.js" type="module"></script>
+  <script src="scripts/todo.js" type="module"></script>
 </body>
 
 </html>

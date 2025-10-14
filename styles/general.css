@@ -1,42 +1,42 @@
 :root {
-    --primary-color: rgb(104, 104, 218);
-    --primary-accent: rgb(99, 99, 182);
-    --secondary-color: rgb(49, 49, 177);
-    --secondary-accent: rgb(65, 65, 204);
+  --primary-color: rgb(104, 104, 218);
+  --primary-accent: rgb(99, 99, 182);
+  --secondary-color: rgb(49, 49, 177);
+  --secondary-accent: rgb(65, 65, 204);
 
-    --option-white: rgb(159, 159, 159);
-    --option-blue: rgb(45, 115, 219);
-    --option-green: rgb(76, 170, 33);
-    --option-orange: rgb(234, 120, 44);
-    --option-red: rgb(205, 58, 58);
+  --option-white: rgb(159, 159, 159);
+  --option-blue: rgb(45, 115, 219);
+  --option-green: rgb(76, 170, 33);
+  --option-orange: rgb(234, 120, 44);
+  --option-red: rgb(205, 58, 58);
 
-    --delete-color: rgb(190, 2, 2);
-    --delete-accent: rgb(235, 21, 21);
+  --delete-color: rgb(190, 2, 2);
+  --delete-accent: rgb(235, 21, 21);
 }
 
 html,
 body {
-    margin: 0px;
-    padding: 0px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Roboto, Arial;
-    background-image: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
-    color: white;
-    box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Roboto, Arial;
+  background-image: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+  color: white;
+  box-sizing: border-box;
 }
 
 body::selection {
-    background-color: rgba(0, 0, 0, 0.2)
+  background-color: rgba(0, 0, 0, 0.2)
 }
 
 p {
-    margin: 0px;
-    cursor: default;
+  margin: 0px;
+  cursor: default;
 }
 
 a {
-    color: white;
+  color: white;
 }
