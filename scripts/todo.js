@@ -81,8 +81,13 @@ function saveTodos() {
 }
 
 function loadTodos() {
-  console.log(JSON.parse(localStorage.getItem(TODO_KEY)));
-  return JSON.parse(localStorage.getItem(TODO_KEY));
+  try {
+    loadedTodos = JSON.parse(localStorage.getItem(TODO_KEY));
+    return loadTodos && Array.isArray(loadTodos) ? loadTodos : defaultTodos;
+  } catch (error) {
+    console.log(`Error loading todos: ${error}`);
+    return defaultTodos;
+  }
 }
 
 const defaultTodos = [
@@ -94,7 +99,7 @@ const defaultTodos = [
 ]
 
 const TODO_KEY = 'todoKey';
-let todos = loadTodos() || defaultTodos;
+let todos = loadTodos();
 
 const taskInputElement = document.getElementById('todo-task-input');
 const colorInputElement = document.getElementById('todo-color-input');
