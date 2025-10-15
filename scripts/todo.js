@@ -82,8 +82,8 @@ function saveTodos() {
 
 function loadTodos() {
   try {
-    loadedTodos = JSON.parse(localStorage.getItem(TODO_KEY));
-    return loadTodos && Array.isArray(loadTodos) ? loadTodos : defaultTodos;
+    let loadedTodos = JSON.parse(localStorage.getItem(TODO_KEY));
+    return loadedTodos && Array.isArray(loadedTodos) ? loadedTodos : defaultTodos;
   } catch (error) {
     console.log(`Error loading todos: ${error}`);
     return defaultTodos;
