@@ -148,6 +148,7 @@
   font-weight: bold;
   border-radius: 500px;
   transition: all 200ms ease;
+  word-break: break-word;
 }
 
 .todo-display-card-popup {
@@ -195,6 +196,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 20px;
   color: white;
   background-color: var(--delete-accent);
   border: 4px solid var(--delete-color);
