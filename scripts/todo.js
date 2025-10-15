@@ -8,8 +8,6 @@ class Todo {
   color;
 }
 
-const todos = [];
-
 function updateColorInput() {
   const { value: color } = colorInputElement
   colorInputElement.style.backgroundColor = `var(--option-${color})`;
@@ -20,30 +18,68 @@ function addTask() {
   const { value: color } = colorInputElement;
   if (task) {
     for (let i = 0; i < todos.length; i++) {
-      if (todos[i].task == task) return;
+      if (todos[i].task === task) return;
     }
     todos.push(new Todo(task, color))
-    updateTodoDisplay();
+    updateTodoDisplay(1);
   }
   taskInputElement.value = '';
 }
 
-function updateTodoDisplay() {
+function updateTodoDisplay(animateLast) {
   let innerHTML = '';
   todos.forEach((todoItem, index) => {
+    const doAnimate = index >= todos.length - animateLast;
     innerHTML += `
-      <div class="todo-display-card todo-display-${todoItem.color} ${index == todos.length - 1 ? 'todo-display-card-popup' : ''}">
+      <div class="todo-display-card todo-display-${todoItem.color} ${doAnimate ? 'todo-display-card-popup' : ''}">
             ${todoItem.task}
-            <button class="todo-display-delete" data-todo-task="${todoItem.task}">
-                <i class='bx  bxs-trash-x bx-sm'></i>
+            <button class="todo-display-delete js-todo-display-delete" data-todo-task="${todoItem.task}">
+                <i class='bx bxs-trash-x bx-sm'></i>
             </button>
       </div>
       `;
   })
+
   todoDisplayContainer.innerHTML = innerHTML;
-  todoDisplayContainer.scrollTop = todoDisplayContainer.scrollHeight;
+  if (animateLast) todoDisplayContainer.scrollTop = todoDisplayContainer.scrollHeight;
+
+  bindDeleteButtons();
+  saveTodos();
 }
 
+function bindDeleteButtons() {
+  const todoDisplayDeleteElements = document.querySelectorAll('.js-todo-display-delete');
+  todoDisplayDeleteElements.forEach((todoDisplayDeleteElement) => {
+    todoDisplayDeleteElement.addEventListener('click', () => {
+      const deletedTask = todoDisplayDeleteElement.dataset.todoTask;
+      todos = todos.filter((todoItem) => todoItem.task !== deletedTask);
+      let found = false;
+      document.querySelectorAll('.todo-display-card').forEach((todoCard, index) => {
+        if (found) {
+          todoCard.style.translate = "0px -130%";
+        }
+        if ((todoCard.innerText === deletedTask)) {
+          todoCard.style.scale = 0;
+          found = true;
+        }
+      })
+      setTimeout(() => {
+        updateTodoDisplay(0)
+      }, 250);
+    })
+  })
+}
+
+function saveTodos() {
+  localStorage.setItem(TODO_KEY, JSON.stringify(todos));
+}
+
+function loadTodos() {
+  return JSON.parse(localStorage.getItem(TODO_KEY));
+}
+
+const TODO_KEY = 'todoKey';
+let todos = loadTodos() || [];
 const taskInputElement = document.getElementById('todo-task-input');
 const colorInputElement = document.getElementById('todo-color-input');
 const todoAddButtonElement = document.querySelector('.js-todo-add-button');
@@ -52,4 +88,5 @@ const todoDisplayContainer = document.querySelector('.js-todo-display-container'
 colorInputElement.addEventListener('change', updateColorInput);
 todoAddButtonElement.addEventListener('click', addTask);
 
-updateTodoDisplay();
+loadTodos();
+updateTodoDisplay(todos.length);

@@ -56,14 +56,20 @@
   outline: none;
 }
 
+.todo-task-input:active {
+  scale: 1.05;
+}
+
 .todo-color-input {
   appearance: none;
+  color: white;
+  font-weight: bold;
   border: 4px solid var(--secondary-accent);
   border-radius: 500px;
   box-shadow: 0px 5px 0px var(--secondary-color), 0px 5px 10px 2px rgba(0, 0, 0, 0.4), inset 0px 0px 0px 4px rgba(255, 255, 255, 0.5);
   cursor: pointer;
   width: 34%;
-  transition: all 300ms ease;
+  transition: all 150ms ease, background-color 300ms ease-out;
 }
 
 .todo-color-input:hover {
@@ -73,6 +79,10 @@
 
 .todo-color-input:focus {
   outline: none;
+}
+
+.todo-color-input:active {
+  scale: 1.05;
 }
 
 .todo-add-button {
@@ -105,6 +115,7 @@
   box-shadow: none;
   margin-top: 8px;
   margin-bottom: 0px;
+  scale: 1.02 1.01;
 }
 
 .todo-display-container {
@@ -203,6 +214,16 @@
   opacity: 1;
   scale: 1;
   translate: 0px 0px;
+}
+
+.todo-color-option {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.todo-color-option:checked {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .todo-color-option-white {
