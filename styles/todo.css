@@ -63,6 +63,7 @@
 .todo-color-input {
   appearance: none;
   color: white;
+  font-size: 18px;
   font-weight: bold;
   border: 4px solid var(--secondary-accent);
   border-radius: 500px;
@@ -218,6 +219,7 @@
 
 .todo-color-option {
   color: white;
+  font-size: 14px;
   font-weight: bold;
   text-align: center;
 }

@@ -8,6 +8,12 @@ class Todo {
   color;
 }
 
+function handleTaskInputKeyDown({ key }) {
+  if (key === 'Enter') {
+    addTask();
+  }
+}
+
 function updateColorInput() {
   const { value: color } = colorInputElement
   colorInputElement.style.backgroundColor = `var(--option-${color})`;
@@ -75,18 +81,28 @@ function saveTodos() {
 }
 
 function loadTodos() {
+  console.log(JSON.parse(localStorage.getItem(TODO_KEY)));
   return JSON.parse(localStorage.getItem(TODO_KEY));
 }
 
+const defaultTodos = [
+  { task: 'Wash the Dishes', color: 'blue' },
+  { task: 'Dance to a Song', color: 'green' },
+  { task: 'Do Math Homework', color: 'red' },
+  { task: 'Commit Arson', color: 'blue' },
+  { task: 'Sleep 8 Hours', color: 'orange' }
+]
+
 const TODO_KEY = 'todoKey';
-let todos = loadTodos() || [];
+let todos = loadTodos() || defaultTodos;
+
 const taskInputElement = document.getElementById('todo-task-input');
 const colorInputElement = document.getElementById('todo-color-input');
 const todoAddButtonElement = document.querySelector('.js-todo-add-button');
 const todoDisplayContainer = document.querySelector('.js-todo-display-container');
 
+taskInputElement.addEventListener('keydown', handleTaskInputKeyDown)
 colorInputElement.addEventListener('change', updateColorInput);
 todoAddButtonElement.addEventListener('click', addTask);
 
-loadTodos();
 updateTodoDisplay(todos.length);
