@@ -20,7 +20,7 @@ Made this to practice HTML, CSS and Javascript ✌️
   Desktop
 </p>
 
-`<br><br>``<br>`
+<br><br><br>
 
 <p align="center">
   <img src="https://github.com/Sheikh-Rashdan/todo-list-webapp/blob/master/display/2.jpg" width=410px height=800px>
