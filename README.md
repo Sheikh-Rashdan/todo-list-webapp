@@ -13,7 +13,7 @@ Made this to practice HTML, CSS and Javascript ✌️
 ## Gallery
 
 <p align="center">
-  <img src="" width=100px height=100px>
+  <img src="https://github.com/Sheikh-Rashdan/todo-list-webapp/blob/master/display/1.png" width=1280px height=720px>
 </p>
 <p align="center">
   Desktop
@@ -22,7 +22,7 @@ Made this to practice HTML, CSS and Javascript ✌️
 <br><br><br>
 
 <p align="center">
-  <img src="" width=100px height=100px>
+  <img src="https://github.com/Sheikh-Rashdan/todo-list-webapp/blob/master/display/2.jpg" width=410px height=800px>
 </p>
 <p align="center">
   Mobile
